@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>New Tab</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="pageBackgroundPicture">
+        <label for="inputBackgroundImage">
+            <span>Change</span>
+            <input type="file" name="Background Image" id="inputBackgroundImage">
+        </label>
+    </div>
+
+    <form id="frmMainTile" action="#">
+		<h1 id="frmMainTileHeader" style="color: aliceblue; background-color: slategray; padding-left: 1rem;">Add Tile</h1>
+        <div>
+			<label for="tileChkTitle">Show title?</label>
+			<input id="tileChkTitle" checked type="checkbox">
+		</div>
+
+		<div>
+			<label for="tileTitle">Title</label>
+			<br>
+			<input id="tileTitle" placeholder="Title" type="text">
+		</div>
+		<div>
+			<label for="tileURL">URL</label>
+			<br>
+			<input  type="url" pattern="https?://.+" placeholder="http:// or https://" id="tileURL" required>
+		</div>
+		<div>
+			<label for="tileImage">Image</label>
+			<br>
+			<input type="file" name="" id="tileImage">
+		</div>
+		<div>
+			<label for="tileSize">Tile Size</label>
+			<br>
+			<select name="" id="tileSize">
+				<option value="small">Small</option>
+				<option value="medium">Medium</option>
+				<option value="large">Large</option>
+				<option value="wide">Wide</option>
+				<option value="tall">Tall</option>
+			</select>
+		</div>
+		<div>
+			<label for="tileBGColor">Background Color</label>
+			<br>
+			<input type="color" value="#000000" name="" id="tileBGColor">
+		</div>
+		<div>
+			<label for="tileTextColor">Text Color</label>
+			<br>
+			<input type="color" value="#ffffff" name="" id="tileTextColor">
+		</div>
+		<div>
+			<input type="button" id="tileAdd" value="Add">
+			<input type="button" id="tileCancel" value="Cancel">
+		</div>
+		<div class="tilePreview">
+			<div id="tilePreview" class="item itemPRV small">
+				<div class="item-content">
+                    <!-- Safe zone, enter your custom markup -->
+					<div class="removeItem"></div>
+					<div class="editItem"></div>			
+					
+					<a></a>
+					<!-- Safe zone ends -->
+				</div>
+			</div>
+		</div>
+    </form>
+    <form id="frmAddQuickLink" action="#">
+		<h1 style="color: aliceblue; background-color: slategray; padding-left: 1rem;">Add Quick Link</h1>
+		<div>
+			<label for="qlURL">URL</label>
+			<br>
+			<input id="qlURL" type="url" pattern="https?://.+" placeholder="http:// or https://" required>
+		</div>
+		<div>
+			<label for="qlImage">Image</label>
+			<br>
+			<input type="file" name=""  id="qlImage">
+		</div>
+		<div>
+			<label for="qlBGColor">Background Color</label>
+			<br>
+			<input type="color" value="#000000" name="" id="qlBGColor">
+		</div>
+		<div>
+			<input type="button" id="qlAdd" value="Add" >
+			<input type="button" id="qlCancel" value="Cancel">
+		</div>
+		<div class="tilePreview">
+			<div id="QuickLinkPreview" class="item itemPRV small">
+				<div class="item-content">
+                    <!-- Safe zone, enter your custom markup -->
+                    <a></a>
+					<!-- Safe zone ends -->
+				</div>
+			</div>
+		</div>
+    </form>
+    
+    <div class="container">
+        <div class="firstChild">
+            
+        </div>
+        <div class="secondChild">
+            <div id="userProfile">
+                <div class="userPhoto">
+                    <label for="inputProfilePicture">
+                        <span>Change</span>
+                        <input type="file" name="ProfilePicture" id="inputProfilePicture">
+                    </label>
+                </div>
+                <div class="userName">
+					<input type="text" name="" id="userName" spellcheck="false" placeholder="Enter Name">
+					<input type="text" name="" id="userNickName" spellcheck="false" placeholder="Nick Name">
+                </div>
+            </div>
+            <div class="quickLinks">
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- this is where scripts begin -->
+    <script src="web-animations.min.js"></script>
+    <script src="muuri.min.js"></script>
+
+    <script src="myMuuri.js"></script>
+
+    <script src="myUrl.js"></script>
+    <script src="myStorageHelper.js"></script>
+
+	<script src="popup.js"></script>
+	<script src="myContextHandler.js"></script>
+	
+    <script src="main.js"></script>
+
+</body>
+
+</html>
